@@ -62,9 +62,22 @@
 	// nodes in the resource, remove unwanted nodes from the resource (eg- extra cameras),
 	// or extract only specific nodes from the resource to add them directly to the scene,
 	// instead of adding the entire contents.
-	CC3ResourceNode* rezNode = [CC3PODResourceNode nodeFromFile: @"hello-world.pod"];
-	[self addChild: rezNode];
-	
+    
+    CC3PODResourceNode* cube = [CC3PODResourceNode nodeFromFile: @"cube.pod"];
+    CC3Node* light = [cube getNodeNamed:@"Lamp"];
+    [cube removeChild:light];
+    CC3Node* camera = [cube getNodeNamed:@"Camera"];
+    [cube removeChild:camera];
+    
+    for (int k=0; k<40; k++) {
+        for (int i=0; i<25; i++) {
+            CC3ResourceNode* j = [cube copy];
+            j.scale = cc3v(0.1, 0.1, 0.1);
+            j.location = cc3v(0.3*k-5, 0.3*i-3.5, 0.0);
+            [self addChild: j];
+        }
+    }
+    
 	// Or, if you don't need to modify the resource node at all before adding its content,
 	// you can simply use the following as a shortcut, instead of the previous lines.
 //	[self addContentFromPODFile: @"hello-world.pod"];
@@ -153,17 +166,17 @@
 	// using a couple of actions...
 	
 	// Fetch the 'hello, world' object that was loaded from the POD file and start it rotating
-	CC3MeshNode* helloTxt = (CC3MeshNode*)[self getNodeNamed: @"Hello"];
-	[helloTxt runAction: [CC3ActionRotateForever actionWithRotationRate: cc3v(0, 30, 0)]];
+	//CC3MeshNode* helloTxt = (CC3MeshNode*)[self getNodeNamed: @"Hello"];
+	//[helloTxt runAction: [CC3ActionRotateForever actionWithRotationRate: cc3v(0, 30, 0)]];
 	
 	// To make things a bit more appealing, set up a repeating up/down cycle to
 	// change the color of the text from the original red to blue, and back again.
-	GLfloat tintTime = 8.0f;
-	CCColorRef startColor = helloTxt.color;
-	CCColorRef endColor = CCColorRefFromCCC4F(ccc4f(0.2, 0.0, 0.8, 1.0));
-	CCActionInterval* tintDown = [CCActionTintTo actionWithDuration: tintTime color: endColor];
-	CCActionInterval* tintUp   = [CCActionTintTo actionWithDuration: tintTime color: startColor];
-	[helloTxt runAction: [[CCActionSequence actionOne: tintDown two: tintUp] repeatForever]];
+	//GLfloat tintTime = 8.0f;
+	//CCColorRef startColor = helloTxt.color;
+	//CCColorRef endColor = CCColorRefFromCCC4F(ccc4f(0.2, 0.0, 0.8, 1.0));
+	//CCActionInterval* tintDown = [CCActionTintTo actionWithDuration: tintTime color: endColor];
+	//CCActionInterval* tintUp   = [CCActionTintTo actionWithDuration: tintTime color: startColor];
+	//[helloTxt runAction: [[CCActionSequence actionOne: tintDown two: tintUp] repeatForever]];
 }
 
 /**
@@ -235,7 +248,7 @@
 
 	// Move the camera to frame the scene. The resulting configuration of the camera is output as
 	// an [info] log message, so you know where the camera needs to be in order to view your scene.
-	[self.activeCamera moveWithDuration: 3.0 toShowAllOf: self withPadding: 0.5f];
+	//[self.activeCamera moveWithDuration: 3.0 toShowAllOf: self withPadding: 0.5f];
 
 	// Uncomment this line to draw the bounding box of the scene.
 //	self.shouldDrawWireframeBox = YES;

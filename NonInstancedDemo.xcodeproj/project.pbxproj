@@ -322,7 +322,25 @@
 		DE202C9619A6BD9000A92DE6 /* CC3VertexArrayMeshModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DE202C9519A6BD9000A92DE6 /* CC3VertexArrayMeshModel.m */; };
 		DE202C9919A6BD9000A92DE6 /* CC3World.m in Sources */ = {isa = PBXBuildFile; fileRef = DE202C9819A6BD9000A92DE6 /* CC3World.m */; };
 		DE202C9D19A6BD9000A92DE6 /* LICENSE_cocos3d.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE202C9C19A6BD9000A92DE6 /* LICENSE_cocos3d.txt */; };
+		DE202CAE19A6BE5100A92DE6 /* cube.pod in Resources */ = {isa = PBXBuildFile; fileRef = DE202CA919A6BDC500A92DE6 /* cube.pod */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE202CAA19A6BE0700A92DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE2028BB19A6BD8C00A92DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE20298119A6BD8C00A92DE6;
+			remoteInfo = cocos2d;
+		};
+		DE202CAC19A6BE0B00A92DE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE2028BB19A6BD8C00A92DE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE202AFC19A6BD8D00A92DE6;
+			remoteInfo = cocos3d;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DE2028C319A6BD8C00A92DE6 /* NonInstancedDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NonInstancedDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -934,6 +952,7 @@
 		DE202C9A19A6BD9000A92DE6 /* CCNodeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CCNodeController.h; path = cocos3d/deprecated/CCNodeController.h; sourceTree = "<group>"; };
 		DE202C9B19A6BD9000A92DE6 /* ControllableCCLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ControllableCCLayer.h; path = cocos3d/deprecated/ControllableCCLayer.h; sourceTree = "<group>"; };
 		DE202C9C19A6BD9000A92DE6 /* LICENSE_cocos3d.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE_cocos3d.txt; sourceTree = "<group>"; };
+		DE202CA919A6BDC500A92DE6 /* cube.pod */ = {isa = PBXFileReference; lastKnownFileType = file; name = cube.pod; path = Resources/cube.pod; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1030,6 +1049,7 @@
 		DE2028E219A6BD8C00A92DE6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				DE202CA919A6BDC500A92DE6 /* cube.pod */,
 				DE2028E319A6BD8C00A92DE6 /* hello-world.pod */,
 				DE2028EC19A6BD8C00A92DE6 /* Info.plist */,
 				DE20291319A6BD8C00A92DE6 /* fps_images.png */,
@@ -2041,6 +2061,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				DE202CAD19A6BE0B00A92DE6 /* PBXTargetDependency */,
+				DE202CAB19A6BE0700A92DE6 /* PBXTargetDependency */,
 			);
 			name = NonInstancedDemo;
 			productName = NonInstancedDemo;
@@ -2113,6 +2135,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE202CAE19A6BE5100A92DE6 /* cube.pod in Resources */,
 				DE20295519A6BD8C00A92DE6 /* CC3SingleTextureReflect.fsh in Resources */,
 				DE20296E19A6BD8C00A92DE6 /* CC3LibVertexPositionNoBones.vsh in Resources */,
 				DE2028FF19A6BD8C00A92DE6 /* Icon-60.png in Resources */,
@@ -2461,6 +2484,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DE202CAB19A6BE0700A92DE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE20298119A6BD8C00A92DE6 /* cocos2d */;
+			targetProxy = DE202CAA19A6BE0700A92DE6 /* PBXContainerItemProxy */;
+		};
+		DE202CAD19A6BE0B00A92DE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE202AFC19A6BD8D00A92DE6 /* cocos3d */;
+			targetProxy = DE202CAC19A6BE0B00A92DE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
 		DE202C9E19A6BD9000A92DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2478,6 +2514,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "B1B60BAE-86C2-423C-9BD3-F0B5467082AA";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -2490,6 +2527,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_NS_ASSERTIONS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PROVISIONING_PROFILE = "B1B60BAE-86C2-423C-9BD3-F0B5467082AA";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
