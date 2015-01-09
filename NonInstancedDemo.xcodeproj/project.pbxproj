@@ -2514,7 +2514,7 @@
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = NO;
-				PROVISIONING_PROFILE = "B1B60BAE-86C2-423C-9BD3-F0B5467082AA";
+				PROVISIONING_PROFILE = "07A0BFC3-BBD1-4434-ACF5-DC94E78D8DEB";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALID_ARCHS = "$(ARCHS_STANDARD_32_BIT)";
@@ -2527,7 +2527,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				ENABLE_NS_ASSERTIONS = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				PROVISIONING_PROFILE = "B1B60BAE-86C2-423C-9BD3-F0B5467082AA";
+				PROVISIONING_PROFILE = "07A0BFC3-BBD1-4434-ACF5-DC94E78D8DEB";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -2750,6 +2750,7 @@
 				DE202CA219A6BD9000A92DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE202CA319A6BD9000A92DE6 /* Build configuration list for PBXNativeTarget "cocos2d" */ = {
 			isa = XCConfigurationList;
@@ -2758,6 +2759,7 @@
 				DE202CA519A6BD9000A92DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DE202CA619A6BD9000A92DE6 /* Build configuration list for PBXNativeTarget "cocos3d" */ = {
 			isa = XCConfigurationList;
@@ -2766,6 +2768,7 @@
 				DE202CA819A6BD9000A92DE6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
